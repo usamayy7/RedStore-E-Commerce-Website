@@ -1,0 +1,437 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+</head>
+<body>
+    <div class="header">
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" width="125px">
+                
+            </div>
+
+            <nav>
+
+                <ul id="menuItems">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+            <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Give Your Workout<br> A New Look</h1>
+                <p>Success isn't always about greatness. Its about 
+                 consistency<br>Consistent hard work gain success. Greatness will come.   
+
+                </p>
+                <a href="" class="btn">Explore Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/image1.png'%}">
+
+            </div>
+        </div>
+
+    </div>
+ </div>
+ <!----featured categories-->
+    <div class="categories">
+        <div class="smallContainer">
+            <div class="row">
+                <div class="col-3">
+                    <img src="{% static 'images/category-1.jpg' %}" >
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/category-2.jpg' %}" >
+    
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/category-3.jpg' %}" >
+    
+                </div>
+    
+            </div>
+
+        </div>
+        
+    </div>
+<!----featured products-->
+     <div class="smallContainer">
+         <h2 class="title">Featured Products</h2>
+         <div class="row">
+             <div class="col-4">
+                 <img src="{% static 'images/product-1.jpg' %}">
+                 <h4>Red Printed T-Shirt</h4>
+                 <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+
+                 </div>
+                 <p>$50.0</p>
+
+             </div>
+             <div class="col-4">
+                <img src="{% static 'images/product-2.jpg' %}">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-o"></i>
+
+
+                </div>
+                <p>$30.0</p>
+
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-3.jpg' %}">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-o"></i>
+
+
+                </div>
+                <p>$70.0</p>
+
+            </div>
+            <div class="col-4">
+                <img src="{% static 'images/product-4.jpg' %}">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half-o"></i>
+
+
+                </div>
+                <p>$60.0</p>
+
+            </div>
+         </div>
+         <h2 class="title">Latest Products</h2>
+         <div class="row">
+            <div class="col-4">
+                <img src="{% static 'images/product-5.jpg' %}">
+                <h4>Gray Air Jordan</h4>
+                <div class="rating">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-o"></i>
+
+
+                </div>
+                <p>$50.0</p>
+
+            </div>
+            <div class="col-4">
+               <img src="{% static 'images/product-6.jpg' %}">
+               <h4>Premium Sports Shirt</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+
+
+               </div>
+               <p>$30.0</p>
+
+           </div>
+           <div class="col-4">
+               <img src="{% static 'images/product-7.jpg' %}">
+               <h4>Bundle of Socks</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+
+
+               </div>
+               <p>$70.0</p>
+
+           </div>
+           <div class="col-4">
+               <img src="{% static 'images/product-8.jpg' %}">
+               <h4>Black Premium Watch</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+
+
+               </div>
+               <p>$60.0</p>
+
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="{% static 'images/product-9.jpg' %}">
+                <h4>Black Watch</h4>
+                <div class="rating">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-o"></i>
+
+
+                </div>
+                <p>$50.0</p>
+
+            </div>
+            <div class="col-4">
+               <img src="{% static 'images/product-10.jpg' %}">
+               <h4>Black Snickers</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+
+
+               </div>
+               <p>$30.0</p>
+
+           </div>
+           <div class="col-4">
+               <img src="{% static 'images/product-11.jpg' %}">
+               <h4>Gray Snickers</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+
+
+               </div>
+               <p>$70.0</p>
+
+           </div>
+           <div class="col-4">
+               <img src="{% static 'images/product-12.jpg' %}">
+               <h4>Black Trouser</h4>
+               <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+
+
+               </div>
+               <p>$60.0</p>
+
+           </div>
+        </div>
+
+     </div>
+   <!----Offer--> 
+     <div class="offer">
+         <div class="smallContainer">
+             <div class="row">
+                 <div class="col-2">
+                     <img src="{% static 'images/exclusive.png' %}" class="offerImg">
+
+                 </div>
+                 <div class="col-2">
+                     <p>Exclusively Available on Redstore</p>
+                     <h1>Smart Band 4</h1>
+                     <small>
+                         MI band 4 features a 40% larger Amoled color
+                         full-touch display with adjustabl brightness,
+                         so everything is as clean as can be.
+                     </small>
+                     <a href="" class="btn">Buy Now &#8594;</a>
+                 </div>
+
+             </div>
+         </div>
+     </div> 
+ <!----testimonials--> 
+     <div class="testimonials">
+         <div class="row">
+             <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                 <p>Best experience of shopping from Redstore.
+                     Their all products are amazing.I orderd Air Jordan
+                     snickers and got it in 2 days
+                 </p>
+                 <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+                 </div>
+                 <img src="{% static 'images/user-1.png' %}" >
+                 <h3>Ali sajjad</h3>
+             </div>
+             <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                 <p>Their delivery services are best as compared to other
+                     online stores.Their customer service is also good.
+                 </p>
+                 <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+                 </div>
+                 <img src="{% static 'images/user-2.png' %}" >
+                 <h3>Zummon</h3>
+             </div>
+             <div class="col-3">
+                <i class="fa fa-quote-left"></i>
+                 <p>I ordered sports tshirts from Redstore
+                     got in 3 days.Their products are really 
+                     amazing.
+                 </p>
+                 <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+                 </div>
+                 <img src="{% static 'images/user-3.png' %}" >
+                 <h3>Saad</h3>
+             </div>
+         </div>
+     </div>
+<!----logo-->
+     <div class="brands">
+         <div class="smallContainer">
+             <div class="row">
+                 <div class="col-5">
+                     <img src="{% static 'images/6-2-puma-logo-png-clipart(1).png' %}" >
+                 </div>
+                 <div class="col-5">
+                     <img src="{% static 'images/777.png' %}">
+                 </div>
+                 <div class="col-5">
+                     <img src="{% static 'images/H&M-Logo.png' %}">
+                 </div>
+                 <div class="col-5">
+                     <img src="{% static 'images/zara(1).png' %}">
+                 </div>
+                 <div class="col-5">
+                     <img src="{% static 'images/logo-oppo.png' %}">
+                 </div>
+             </div>
+         </div>
+     </div>
+<!----footer-->
+     <div class="footer">
+         <div class="container">
+             <div class="row">
+                 <div class="footerCol1">
+                     <h3>Download our App</h3>
+                     <p>Download App for Android and ios mobile phone</p>
+                     <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                     </div> 
+                 </div>
+                 <div class="footerCol2">
+                    <img src="{% static 'images/logo-white.png' %}">
+                    <p>Our purpose is to sustainably make the pleasure to upgrade people'style</p>
+                    
+                </div>
+                <div class="footerCol3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                        
+                    </ul>
+                </div>
+                <div class="footerCol4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                        
+                    </ul>
+                </div>
+
+             </div>
+         </div>
+         <hr>
+           <p class="copyright">All Copyrights Reserved.</p>
+     </div>
+<!----js for toggle menu-->
+     <script>
+         var menuItems = document.getElementById("menuItems");
+         menuItems.style.maxHeight = "0px";
+
+         function menutoggle(){
+             if(menuItems.style.maxHeight =="0px")
+                {
+                    menuItems.style.maxHeight = "200px";
+                }
+             else
+                {
+                    menuItems.style.maxHeight = "0px";
+                }
+         }
+     </script>
+
+    
+     
+
+
+    
+    
+    
+</body>
+</html>
